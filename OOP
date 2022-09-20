@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas JavaScript | Afrizal</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <p id="p1">Info Gempa</p>
+    </div>
+    <table align="center" border="1" cellpadding="30">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Lokasi</th>
+          <th>Skala Gempa</th>
+          <th>Dampak dari Gempa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <script>
+          class Gempa {
+            constructor(no, lokasi, skala) {
+              this.no = no;
+              this.lok = lokasi;
+              this.skal = skala;
+            }
+
+            dampak() {
+              if (this.skal <= 2) this.dampakgempa = 'Tidak Terasa';
+              else if (this.skal > 2 && this.skal <= 4) this.dampakgempa = 'Bangunan Bergerat';
+              else if (this.skal > 4 && this.skal <= 6) this.dampakgempa = 'Atap Bangunan Roboh';
+              else if (this.skal > 6) this.dampakgempa = 'Berpotensi Tsunami';
+              else this.dampakgempa = 'tidak ada data'
+              return this.dampakgempa;
+            }
+
+            infoGempa() {
+              this.info = document.write(` <tr>
+                                            <td>${this.no}</td>
+                                            <td>${this.lok}</td>
+                                            <td>${this.skal}</td>
+                                            <td>${this.dampak()}</td>
+                                            </tr>
+                                            `);
+            }
+          }
+
+          gem1 = new Gempa(1, 'Jakarta Barat-DKI Jakarta', 6);
+          gem2 = new Gempa(2, 'Bandung-Jawa Barat', 5);
+          gem3 = new Gempa(3, 'Tegal-Jawa Tengah', 6);
+          gem4 = new Gempa(4, 'Maluku Tenggara Barat', 7);
+          gem5 = new Gempa(5, 'Malang-Jawa Timur', 8);
+          gem6 = new Gempa(6, 'Bali-Jawa Tengah', 3);
+          gem7 = new Gempa(7, 'Kaur-Bengkulu', 4);
+          gem8 = new Gempa(8, 'Mukomuko-Bengkulu', 5);
+          gem9 = new Gempa(9, 'Gunung Kidul-Yogyakarta', 5);
+          gem10 = new Gempa(10, 'Niasutara-Sumatera Utara', 4);
+
+          /*let kumpulanGempa = [gem1,gem2,gem3,gem4,gem5,gem6,gem7,gem8,gem9,gem10];
+          for(let g in kumpulanGempa){
+            kumpulanGempa[g].infoGempa();
+          }*/
+
+          gem1.infoGempa();
+          gem2.infoGempa();
+          gem3.infoGempa();
+          gem4.infoGempa();
+          gem5.infoGempa();
+          gem6.infoGempa();
+          gem7.infoGempa();
+          gem8.infoGempa();
+          gem9.infoGempa();
+          gem10.infoGempa();
+        </script>
+      </tbody>
+    </table>
+  </body>
+</html>
