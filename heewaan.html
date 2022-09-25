@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> AFRIZAL | Tugas 7 JavaScript </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+</head>
+
+<style>
+    body {
+      background-color: maroon;
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 1cm 3cm;
+    }
+    .topnav {
+      align-items: center;
+      overflow: hidden;
+      background-color: #191919;
+      padding: 2%;
+      margin-bottom: 2%;
+    }
+    #p1 {
+      font-family: 'Times New Roman', Cochin, Georgia, Times, Cambria, serif;
+      color: yellow;
+      font-size: 23px;
+      text-align: center;
+    }
+    .accordion-item,
+    .accordion-header {
+      align-items: center;
+      overflow: hidden;
+      background-color: #191919;
+    }
+    .accordion-button {
+      font-family: 'Times New Roman', Cochin, Georgia, Times, Cambria, serif;
+      color: yellow;
+      font-size: 20px;
+      text-align: center;
+      background-color: #191919;
+    }
+    .card-text {
+      color: darkkhaki;
+    }
+</style>
+
+<body>
+  <div class="topnav">
+    <p id="p1"> "Menampilkan Gambar dan Suara Hewan" </p>
+  </div>
+
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Hewan Ternak</button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+    <div class="row justify-content-center">
+        
+      <div class="col-md-4 mb-3">
+      <div class="card text-center" style="width: 15rem">
+      <div class="card-body">
+      <h5 class="card-title" id="sapi">Sapi</h5>
+      <div class="audio"></div>
+      <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+      </div>
+      </div>
+      </div>
+              
+      <div class="col-md-4 mb-3">
+      <div class="card text-center" style="width: 15rem">
+      <div class="card-body">
+      <h5 class="card-title" id="kambing">Kambing</h5>
+      <div class="audio"></div>
+      <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+      </div>
+      </div>
+      </div>
+              
+      <div class="col-md-3 mb-3">
+      <div class="card text-center" style="width: 15rem">
+      <div class="card-body">
+      <h5 class="card-title" id="kerbau">Kerbau</h5>
+      <div class="audio"></div>
+      <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+      </div>
+      </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Hewan Buas</button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+    <div class="row justify-content-center">
+              
+      <div class="col-md-4 mb-3">
+      <div class="card text-center" style="width: 15rem">
+      <div class="card-body">
+      <h5 class="card-title" id="harimau"> Harimau </h5>
+      <div class="audio"></div>
+      <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+      </div>
+      </div>
+      </div>
+      
+      <div class="col-md-4 mb-3">
+      <div class="card text-center" style="width: 15rem">
+      <div class="card-body">
+      <h5 class="card-title" id="singa"> Singa </h5>
+      <div class="audio"></div>
+      <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+      </div>
+      </div>
+      </div>
+              
+      <div class="col-md-3 mb-3">
+      <div class="card text-center" style="width: 15rem">
+      <div class="card-body">
+      <h5 class="card-title" id="gorila"> Gorila </h5>
+      <div class="audio"></div>
+      <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+      </div>
+      </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Hewan Unggas</button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+    <div class="row justify-content-center">
+              
+        <div class="col-md-4 mb-3">
+        <div class="card text-center" style="width: 15rem">
+        <div class="card-body">
+        <h5 class="card-title" id="ayam"> Ayam </h5>
+        <div class="audio"></div>
+        <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+        </div>
+        </div>
+        </div>
+              
+        <div class="col-md-4 mb-3">
+        <div class="card text-center" style="width: 15rem">
+        <div class="card-body">
+        <h5 class="card-title" id="angsa"> Angsa </h5>
+        <div class="audio"></div>
+        <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+        </div>
+        </div>
+        </div>
+              
+        <div class="col-md-3 mb-3">
+        <div class="card text-center" style="width: 15rem">
+        <div class="card-body">
+        <h5 class="card-title" id="merak"> Burung Merak </h5>
+        <div class="audio"></div>
+        <p class="card-text"> Tekan Untuk Melihat Gambar dan Suara Hewan Ini. </p>
+        </div>
+        </div>
+        </div>
+              
+      </div>
+      </div>
+      </div>
+      </div>
+
+  <script src="jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="heewaan.js"></script>
+
+</body>
+</html>
