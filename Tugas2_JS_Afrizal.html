@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas2_JS_Afrizal</title>
+</head>
+
+<body>
+    <h1 align="center">Daftar Pegawai</h1>
+    <table cellpading="10" align="center">
+        <thead>
+            <tr bgcolor="red">
+                <th>No</th>
+                <th>Nama</ th>
+                <th>Jabatan</th>
+                <th>Agama</th>
+                <th>Gaji Pokok</th>
+                <th>Tunjangan Jabatan</th>
+                <th>Tunjangan Kesehatan</th>
+                <th>Gaji Kotor</th>
+                <th>Zakat Profesi</th>
+                <th>Take Home Pay</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                let jabatan = "Manager";
+                let gaji_pokok = 0;
+                for (let numbers = 1; numbers <= 100; numbers++) {
+                    
+                    if (numbers > 75 && numbers <= 100) jabatan = "Staff";
+                    else if (numbers > 50 && numbers <= 75) jabatan = "Supervisor";
+                    else if (numbers > 25 && numbers <= 50) jabatan = "Asisten Manager";
+                    else jabatan = "Manager";
+                    
+                    switch (jabatan) {
+                        case "Staff": gaji_pokok = 4000000;
+                        case "Supervisor": gaji_pokok = 7000000;
+                        case "Asisten Manager": gaji_pokok = 10000000;
+                        case "Manager": gaji_pokok = 15000000;
+                        default: gaji_pokok = 15000000;
+                    }
+                    
+                    let tunjangan_jabatan = gaji_pokok * 0.2;
+                    let tunjangan_kesehatan = gaji_pokok * 0.1;
+                    let gaji_kotor = gaji_pokok + tunjangan_jabatan + tunjangan_kesehatan;
+                    let agama = "Muslim";
+                    numbers % 2 == 1 ? agama : agama = "Non Muslim";
+                    const warna = agama === "Muslim" ? "pink" : "orange";
+                    
+                    let zakat_profesi = 0;
+                    if (agama === "Muslim" && gaji_kotor >= 7000000) zakat_profesi = gaji_kotor * 0.025;
+                    else zakat_profesi = 0;
+                    
+                    const takeHomePay = gaji_kotor - zakat_profesi;
+                    
+                    document.write(`
+                        <tr bgcolor=${warna}>
+                            <td class="text-center">${numbers}</td>
+                            <td>Pegawai${numbers}</td>
+                            <td>${jabatan}</td>
+                            <td>${agama}</td>
+                            <td>${gaji_pokok}</td>
+                            <td>${tunjangan_jabatan}</td>
+                            <td>${tunjangan_kesehatan}</td>
+                            <td>${gaji_kotor}</td>
+                            <td>${zakat_profesi}</td>
+                            <td>${takeHomePay}</td>
+                        </tr>
+                    `)
+                }    
+              </script>
+        </tbody>
+    </table>
+</body>
+</html>

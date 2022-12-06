@@ -1,0 +1,34 @@
+<script language="javascript">
+    var Pegawai = "Ridwan";
+    var jabatan = "Manager";
+    var status  = "Menikah";
+    
+    if (jabatan == "Manager") {
+        gapok = 15000000;
+    }
+    else if (jabatan == "Asisten Manager") {
+        gapok = 10000000
+    }
+    else if (jabatan == "Staff") {
+        gapok = 5000000
+    }
+    else{
+        gapok = 0;
+    }
+
+    let tunjangan_jabatan = 0.15 * gapok;
+    let bpjs = 0.1 * gapok;
+    let tunjangan_keluarga = (status == "Menikah") ? 0.2*gapok : 0;
+    document.write(
+        "<br>Pegawai :" + Pegawai +
+        "<br>Jabatan :" + jabatan +
+        "<br> <table>" +
+            "<thead>" + "<tr bgcolor='Maroon'>" + "<th> Data Gaji </th>" + "<th>Nominal Gaji</th>" + "</tr>" + "</thead>" +
+            "<tbody>" + "<tr>" +
+                 "<td>Gaji Pokok</td>" + "<td>15000000</td>" + "</tr>" +
+                 "<tr>" + "<td>Tunjangan Jabatan</td>" + "<td>2250000</td>" + "</tr>" +
+                 "<tr>" + "<td>BPJS</td>" + "<td>1500000</td>" + "<tr>" +
+                 "<tr>" + "<td>Tunjangan Keluarga</td>" + "<td>3000000</td>" + "</tr>" + "</thead>" +
+            "<tfoot>" + "<tr bgcolor='Green'>" + "<th>Total Gaji</th>" + "<th>21750000</th>" + "</tr>" + "</tfoot>" 
+    );
+</script>
